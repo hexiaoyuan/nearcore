@@ -193,9 +193,9 @@ tempfile = "3.3"
 thiserror = "1.0.30"
 tikv-jemallocator = "0.5.0"
 time = "0.3.9"
-tokio = { version = "~1.19", features = ["fs", "macros", "net", "rt-multi-thread", "sync", "time"] }
-tokio-stream = { version = "0.1.2", features = ["net"] }
-tokio-util = { version = "0.7.1", features = ["codec", "io"] }
+tokio = { version = "1", features = ["fs", "macros", "net", "rt-multi-thread", "sync", "time"] }
+tokio-stream = { version = "0.1.14", features = ["net"] }
+tokio-util = { version = "0.7.8", features = ["codec", "io"] }
 toml = "0.5.8"
 tracing = { version = "0.1.36", features = ["std"] }
 tracing-appender = "0.2.2"
