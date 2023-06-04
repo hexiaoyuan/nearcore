@@ -286,16 +286,16 @@ testlib = { path = "test-utils/testlib" }
 thiserror = "1.0.30"
 tikv-jemallocator = "0.5.0"
 time = "0.3.9"
-tokio = { version = "~1.19", features = ["fs", "macros", "net", "rt-multi-thread", "sync", "time"] }
-tokio-stream = { version = "0.1.2", features = ["net"] }
-tokio-util = { version = "0.7.1", features = ["codec", "io"] }
-toml = "0.5.8"
+tokio = { version = "1.28.2", features = ["fs", "macros", "net", "rt-multi-thread", "sync", "time"] }
+tokio-stream = { version = "0.1.14", features = ["net"] }
+tokio-util = { version = "0.7.8", features = ["codec", "io"] }
+toml = "0.7.4"
 tqdm = "0.4.4"
-tracing = { version = "0.1.36", features = ["std"] }
+tracing = { version = "0.1.37", features = ["std"] }
 tracing-appender = "0.2.2"
-tracing-opentelemetry = "0.17.0"
-tracing-span-tree = "0.1"
-tracing-subscriber = { version = "0.3.15", features = ["env-filter", "fmt", "registry", "std"] }
+tracing-opentelemetry = "0.19.0"
+tracing-span-tree = "0.1.1"
+tracing-subscriber = { version = "0.3.17", features = ["env-filter", "fmt", "registry", "std"] }
 trybuild = "1.0.11"
 turn = "0.6"
 validator = "0.12"
@@ -361,4 +361,4 @@ opt-level = 3
 [workspace.package]
 edition = "2021"
 authors = ["Near Inc <hello@nearprotocol.com>"]
-rust-version = "1.68.2"
+rust-version = "1.70.0"
