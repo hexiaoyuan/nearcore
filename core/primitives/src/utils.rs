@@ -411,7 +411,7 @@ pub fn from_timestamp(timestamp: u64) -> DateTime<chrono::Utc> {
     let secs =
         timestamp.checked_div(NS_IN_SECOND).expect("dividing by non-zero const is safe") as i64;
     let nsecs = timestamp.checked_rem(NS_IN_SECOND).expect("modulo non-zero const is safe") as u32;
-    DateTime::from_utc(NaiveDateTime::from_timestamp(secs, nsecs), chrono::Utc)
+    DateTime::from_utc(NaiveDateTime::from_timestamp_opt(secs, nsecs).unwrap(), chrono::Utc)
 }
 
 /// Converts DateTime UTC time into timestamp in ns.

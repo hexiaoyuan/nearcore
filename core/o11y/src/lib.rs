@@ -5,7 +5,7 @@ pub use context::*;
 use near_crypto::PublicKey;
 use near_primitives_core::types::AccountId;
 use once_cell::sync::OnceCell;
-use opentelemetry::sdk::trace::{self, IdGenerator, Sampler, Tracer};
+use opentelemetry::sdk::trace::{self, RandomIdGenerator, Sampler, Tracer};
 use opentelemetry::sdk::Resource;
 use opentelemetry::KeyValue;
 use opentelemetry_semantic_conventions::resource::SERVICE_NAME;
@@ -265,7 +265,7 @@ where
         .with_trace_config(
             trace::config()
                 .with_sampler(Sampler::AlwaysOn)
-                .with_id_generator(IdGenerator::default())
+                .with_id_generator(RandomIdGenerator::default())
                 .with_resource(Resource::new(resource)),
         )
         .install_batch(opentelemetry::runtime::Tokio)
