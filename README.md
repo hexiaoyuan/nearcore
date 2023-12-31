@@ -84,3 +84,26 @@ https://near.zulipchat.com/
 For non-technical discussion and overall direction of the project, see our Discourse forum:
 
 https://gov.near.org
+
+## my fork
+
+```
+git clone git@github.com:hexiaoyuan/nearcore.git
+git remote add upstream https://github.com/near/nearcore.git
+git fetch upstream
+git switch -c 1.36.2-pt01 upstream/1.36.2
+git push --set-upstream origin 1.36.2-pt01
+.... coding ....
+git commit
+.... .... .... ....
+git push
+#
+#
+git clone -b 1.36.2-pt01 --single-branch https://github.com/hexiaoyuan/nearcore.git src; cd src;
+cargo build --release -p neard;
+.... .... .... ....
+... diff view in web ...
+https://github.com/near/nearcore/compare/1.34.0...hexiaoyuan:nearcore:1.34.0-pt01
+https://github.com/near/nearcore/compare/1.35.0...hexiaoyuan:nearcore:1.35.0-pt01
+https://github.com/near/nearcore/compare/1.36.2...hexiaoyuan:nearcore:1.36.2-pt01
+```
